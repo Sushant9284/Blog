@@ -1,0 +1,41 @@
+<!-- <p>
+  blog-display-page works!
+</p> -->
+
+
+
+<h1>All Blogs</h1>
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-md-6" *ngFor="let blog of blogData | filter:blogName">
+<div class="blog-display">
+<div >
+  <div class="header">
+  <h3 maxlength="20" [routerLink]="['/blog-page-editing']"
+  [queryParams]="{ id: blog.id}" >{{blog.header}}</h3>
+</div>
+  <p>{{blog.content}}</p>
+  <div class="description">
+  <p maxlength="20">{{blog.description}}</p>
+  <a [routerLink]="['/blog-page-editing']"
+  [queryParams]="{ id: blog.id}" >More</a>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-md-6">
+  <div class="blog-display" [routerLink]="['/blog-creation']">
+<h1> <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+</svg> Click to Create Blog</h1>
+
+  </div>
+</div>
+
+</div>
+
+</div>

@@ -1,0 +1,54 @@
+.search-field {
+    // float: right;
+    padding: 10px;
+}
+
+
+h1 {
+    text-align: center;
+    color: white;
+  
+}
+
+.blog-display {
+    background-color: rgb(115, 211, 255);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow:#042937 3px 3px 4px 0px;
+    
+    h1{
+        cursor: pointer;
+    }
+
+    h3 {
+        cursor: pointer;
+        text-decoration: underline;
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 31ch;
+    }
+
+    .description {
+        text-justify: distribute;
+        display: flex;
+
+        p {
+
+            // display: inline;
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 60ch;
+        }
+    }
+
+    .header{
+        text-justify: distribute;
+        display: flex;
+    }
+
+}

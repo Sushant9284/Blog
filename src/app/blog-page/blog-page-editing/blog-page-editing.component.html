@@ -1,0 +1,52 @@
+
+<div class="container">
+
+  <div class="blog-page-editing">
+
+    <div class="row">
+<div class="col-md-12">
+
+<ng-container *ngIf="show">
+  <ng-container *ngIf="data.length>0 else blogDetails">
+    <div  *ngFor="let blog of data">
+      <h3 >{{blog.header}}</h3>
+      <p>{{blog.content}}</p>
+      <p>{{blog.description}}</p>      
+      <button class="btn btn-primary" (click)="blogEdit()">Edit</button>    
+    </div>
+  </ng-container>
+
+  <ng-template #blogDetails>
+    <h1>Not Available</h1>
+  </ng-template>
+
+
+
+</ng-container>
+
+<ng-container *ngIf="showWhenClick">
+    <form [formGroup]="form">  
+      <div class="form-group">
+        <label for="">Blog Title</label>
+        <input class="form-control" type="text" name="header" formControlName="header">
+      </div>          
+      <div class="form-group">
+      <label for="">Blog Sub Title</label>
+      <input class="form-control" type="text" name="content" formControlName="content">
+    </div>        
+    <div class="form-group">
+      <label for="">Blog Description</label>
+      <textarea class="form-control" type="text" name="description" formControlName="description"></textarea>
+    </div>    
+    <button class="btn btn-primary" (click)="updateBlog(form.value)">Save</button>
+    </form>
+</ng-container>
+
+</div>
+</div>
+
+</div>
+</div>
+ 
+        
+      

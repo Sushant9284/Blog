@@ -1,0 +1,21 @@
+<!-- <p>
+  blog-creation works!
+</p> -->
+
+<div class="blog-creation">
+<form [formGroup]="form">  
+  <div class="form-group">
+    <label for="">Blog Title</label>
+    <input class="form-control" type="text" name="header" formControlName="header">
+  </div>          
+  <div class="form-group">
+  <label for="">Blog Sub Title</label>
+  <input class="form-control" type="text" name="content" formControlName="content">
+</div>        
+<div class="form-group">
+  <label for="">Blog Description</label>
+  <textarea class="form-control" type="text" name="description" formControlName="description"></textarea>
+</div>    
+<button class="btn btn-primary" (click)="createBlog(form.value)">Save</button>
+</form>
+</div>

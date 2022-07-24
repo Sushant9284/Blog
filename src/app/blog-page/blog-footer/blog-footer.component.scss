@@ -1,0 +1,43 @@
+.footer-10 {
+    background-color: #626161 ;
+
+    a {
+        color: rgb(223, 221, 221);
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #fcfcfc;
+    }
+
+    .footer-heading {
+        color: rgb(223, 221, 221);
+    }
+
+    .right {
+        text-align: right;
+    }
+
+    .list-unstyled {
+        .d-block {
+            text-decoration: none;
+            color: rgb(223, 221, 221);
+
+
+        }
+
+
+        p {
+            width: 34%;
+            text-align: right;
+            color: rgb(185, 182, 182);
+            float: right;
+        }
+
+
+    }
+
+    .copyright {
+        color: rgb(185, 182, 182);
+    }
+}
